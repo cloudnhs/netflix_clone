@@ -1,11 +1,10 @@
 import React from 'react';
+import Routers from "./Components/Routers";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>netflix</h1>
-    </div>
+   <Routers/>
   );
 }
 
