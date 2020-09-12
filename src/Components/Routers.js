@@ -1,16 +1,22 @@
 import React from 'react';
-import { HashRouter as Router, Route} from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
 import Movie from "../Routes/Movie";
 import Search from "../Routes/Search";
 import TV from "../Routes/TV";
+import Header from "./Header";
+
 
 
 const Routers = () => (
     <Router>
         <>
-            <Route path="/" exact component={Movie} />
-            <Route path="/tv" exact component={TV} />
-            <Route path="/search" exact component={Search} />
+            <Header/>
+            <Switch>
+                <Route path="/" exact component={Movie} />
+                <Route path="/tv" exact component={TV} />
+                <Route path="/search" exact component={Search} />
+                <Redirect from="*" to="/search" />
+            </Switch>
         </>
     </Router>
 );
