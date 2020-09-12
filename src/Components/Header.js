@@ -1,22 +1,32 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const Head = styled.header``;
+
+const List = styled.ul``;
+
+const Item = styled.li``;
+
+const SLink = styled(Link)``
 
 const Header = () => {
     return (
-        <header>
-            <ul>
-                <li>
-                    <Link to="/">Movies</Link>
-                </li>
+        <Head>
+            <List>
+                <Item>
+                    <SLink to="/">Movies</SLink>
+                </Item>
 
-                <li>
-                    <Link to="/tv">TV</Link>
-                </li>
+                <Item>
+                    <SLink to="/tv">TV</SLink>
+                </Item>
 
-                <li>
-                    <Link to="/search">Search</Link>                </li>
-            </ul>
-        </header>
+                <Item>
+                    <SLink to="/search">Search</SLink>
+                </Item>
+            </List>
+        </Head>
     );
 };
 
