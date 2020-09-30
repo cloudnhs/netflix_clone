@@ -1,40 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Section from "../../Components/Section";
 
 const TvPresenter = ({airingToday, onTheAir, popular, topRated, error, loading}) => {
     return (
         <div>
             {airingToday && airingToday.length > 0 && (
-                <div>
+                <Section title={"Airing Today"}>
                     {airingToday.map((tv) => (
                         <span> {tv.name}</span>
                     ))}
-                </div>
+                </Section>
             )}
 
             {onTheAir && onTheAir.length > 0 && (
-                <div>
+                <Section title={"On the Air"}>
                     {onTheAir.map((tv) => (
                         <span> {tv.name}</span>
                     ))}
-                </div>
+                </Section>
             )}
 
 
             {popular && popular.length > 0 && (
-                <div>
+                <Section title={"Popular"}>
                     {popular.map((tv) => (
                         <span> {tv.name}</span>
                     ))}
-                </div>
+                </Section>
             )}
 
             {topRated && topRated.length > 0 && (
-                <div>
+                <Section title={"Top Rated"}>
                     {topRated.map((tv) => (
                         <span> {tv.name}</span>
                     ))}
-                </div>
+                </Section>
             )}
 
 
