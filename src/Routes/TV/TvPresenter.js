@@ -12,7 +12,7 @@ const TvPresenter = ({airingToday, onTheAir, popular, topRated, error, loading})
                     {airingToday && airingToday.length > 0 && (
                         <Section title={"Airing Today"}>
                             {airingToday.map((tv) => (
-                                <span> {tv.name}</span>
+                                <span key={tv.id}> {tv.name}</span>
                             ))}
                         </Section>
                     )}
@@ -20,7 +20,7 @@ const TvPresenter = ({airingToday, onTheAir, popular, topRated, error, loading})
                     {onTheAir && onTheAir.length > 0 && (
                         <Section title={"On the Air"}>
                             {onTheAir.map((tv) => (
-                                <span> {tv.name}</span>
+                                <span key={tv.id}> {tv.name}</span>
                             ))}
                         </Section>
                     )}
@@ -29,7 +29,7 @@ const TvPresenter = ({airingToday, onTheAir, popular, topRated, error, loading})
                     {popular && popular.length > 0 && (
                         <Section title={"Popular"}>
                             {popular.map((tv) => (
-                                <span> {tv.name}</span>
+                                <span key={tv.id}> {tv.name}</span>
                             ))}
                         </Section>
                     )}
@@ -37,7 +37,7 @@ const TvPresenter = ({airingToday, onTheAir, popular, topRated, error, loading})
                     {topRated && topRated.length > 0 && (
                         <Section title={"Top Rated"}>
                             {topRated.map((tv) => (
-                                <span> {tv.name}</span>
+                                <span key={tv.id}> {tv.name}</span>
                             ))}
                         </Section>
                     )}
@@ -50,6 +50,13 @@ const TvPresenter = ({airingToday, onTheAir, popular, topRated, error, loading})
 };
 
 TvPresenter.propTypes = {
+    airingToday: PropTypes.array,
+    onTheAir: PropTypes.array,
+    popular: PropTypes.array,
+    topRated: PropTypes.array,
+    error: PropTypes.string,
+    loading: PropTypes.bool.isRequired
+
 
 };
 
