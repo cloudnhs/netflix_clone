@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Section from "../../Components/Section";
 import Loader from "../../Components/Loader";
+import Poster from "../../Components/Poster";
 
 const MoviePresenter = ({nowPlaying, popular, topRated, upcoming, error, loading}) => {
     return (
@@ -12,7 +13,15 @@ const MoviePresenter = ({nowPlaying, popular, topRated, upcoming, error, loading
                     {nowPlaying && nowPlaying.length > 0 && (
                         <Section title={"Now Playing"}>
                             {nowPlaying.map((movie) => (
-                                <span key={movie.id}> {movie.title}</span>
+                                // <span key={movie.id}> {movie.title}</span>
+                                <Poster
+                                    key={movie.id}
+                                    vote_average={movie.vote_average}
+                                    id={movie.id}
+                                    title={movie.title}
+                                    image_url={movie.poster_path}
+                                    release_date={movie.release_date}
+                                />
                             ))}
                         </Section>
                     )}
@@ -20,7 +29,17 @@ const MoviePresenter = ({nowPlaying, popular, topRated, upcoming, error, loading
                     {popular && popular.length > 0 && (
                         <Section title={"Popular"}>
                             {popular.map((movie) => (
-                                <span key={movie.id}> {movie.title}</span>
+                                // <span key={movie.id}> {movie.title}</span>
+                                <Poster
+                                    key={movie.id}
+                                    vote_average={movie.vote_average}
+                                    id={movie.id}
+                                    title={movie.title}
+                                    image_url={movie.poster_path}
+                                    release_date={movie.release_date}
+
+                                />
+
                             ))}
                         </Section>
                     )}
@@ -28,7 +47,15 @@ const MoviePresenter = ({nowPlaying, popular, topRated, upcoming, error, loading
                     {topRated && topRated.length > 0 && (
                         <Section title={"Top Rated"}>
                             {topRated.map((movie) => (
-                                <span key={movie.id}> {movie.title}</span>
+                                //<span key={movie.id}> {movie.title}</span>
+                                <Poster
+                                    key={movie.id}
+                                    vote_average={movie.vote_average}
+                                    id={movie.id}
+                                    title={movie.title}
+                                    image_url={movie.poster_path}
+                                    release_date={movie.release_date}
+                                />
                             ))}
                         </Section>
 
@@ -47,7 +74,15 @@ const MoviePresenter = ({nowPlaying, popular, topRated, upcoming, error, loading
                         {upcoming.length > 0
                             ? <>
                                 {upcoming.map((movie) => (
-                                    <span key={movie.id}>{movie.title}</span>
+                                    //<span key={movie.id}>{movie.title}</span>
+                                    <Poster
+                                        key={movie.id}
+                                        vote_average={movie.vote_average}
+                                        id={movie.id}
+                                        title={movie.title}
+                                        image_url={movie.poster_path}
+                                        release_date={movie.release_date}
+                                    />
                                 ))}
                             </>
                             : <>
