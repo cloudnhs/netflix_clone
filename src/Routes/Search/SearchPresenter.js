@@ -22,7 +22,7 @@ const Input = styled.input`
 const SearchPresenter = ({movies, shows, keyword, onChange, onSubmit, loading}) => {
     return (
         <Container>
-            <Form>
+            <Form onSubmit={onSubmit}>
                 <Input
                     placeholder={"Search Movies or TV shows.."}
                     value = {keyword}

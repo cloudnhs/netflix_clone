@@ -30,7 +30,6 @@ export const movieApi = {
     topRated: () => getAnything("movie/top_rated"),
     upcoming: () => getAnything("movie/upcoming"),
     detail: (movie_id) => getAnything(`movie/${movie_id}`),
-    search: (query) => getAnything("search/movie", { query }),
     similar: (movie_id) => getAnything(`movie/${movie_id}/similar`),
     videos: (movie_id) => getAnything(`movie/${movie_id}/videos`)
 
@@ -42,7 +41,12 @@ export const tvApi = {
     popular: () => getAnything("tv/popular"),
     topRated:() => getAnything("tv/top_rated"),
     detail: (tv_id) => getAnything(`tv/${tv_id}`),
-    search: (query) => getAnything("search/tv", { query }),
     similar: (tv_id) => getAnything(`tv/${tv_id}/similar`),
     videos: (tv_id) => getAnything(`tv/${tv_id}/videos`)
+}
+
+export const searchApi = {
+    movieSearch: (query) => getAnything("search/movie", { query }),
+    tvSearch: (query) => getAnything("search/tv", { query }),
+    keywordSearch: (query) => getAnything("search/keyword", {query})
 }
