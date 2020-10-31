@@ -1,11 +1,11 @@
 import React from 'react';
+import SearchPresenter from "./SearchPresenter";
 
-const Search = () => {
+
+const SearchContainer = () => {
     return (
-        <div>
-            <h1>Search</h1>
-        </div>
+        <SearchPresenter/>
     );
 };
 
-export default Search;
+export default SearchContainer;

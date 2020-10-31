@@ -32,7 +32,7 @@ const MoviePresenter = ({nowPlaying, popular, topRated, upcoming, error, loading
                                 // <span key={movie.id}> {movie.title}</span>
                                 <Poster
                                     key={movie.id}
-                                    vote_average={movie.vote_average}
+                                    // vote_average={movie.vote_average}
                                     id={movie.id}
                                     title={movie.title}
                                     image_url={movie.poster_path}

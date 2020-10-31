@@ -67,7 +67,7 @@ const Poster = ({id, title, image_url, release_date, vote_average}) => {
                 />
                 <Rate>
                     <span role="img" aria-label="rating">⭐ </span>
-                    {(vote_average / 10).toFixed(2)}
+                    {(vote_average / 10)}
                 </Rate>
             </ImageContainer>
             <Title>{title.length > 18 ? `${title.substring(0,18)}...` : title}</Title>
